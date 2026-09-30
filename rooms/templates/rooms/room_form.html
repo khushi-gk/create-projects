@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Room Management - Hospitality Management System</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <nav>
+        <a href="/">Dashboard</a>
+        <a href="/rooms/">Rooms</a>
+        <a href="/bookings/">Bookings</a>
+        <a href="/guests/">Guests</a>
+        <a href="/add-room/">Add Room</a>
+        <a href="/add-booking/">Add Booking</a>
+        <a href="/admin/">Admin</a>
+    </nav>
+
+    <div class="page-container">
+
+        <h1>🏨 Room Management</h1>
+
+        <div class="form-card">
+
+            <h2>Room Details</h2>
+
+            <form method="POST">
+
+                {% csrf_token %}
+
+                <div class="django-form">
+                    {{ form.as_p }}
+                </div>
+
+                <button type="submit">
+                    💾 Save Room
+                </button>
+
+            </form>
+
+        </div>
+
+        <div class="back-link">
+            <a href="/rooms/" class="button">
+                ← Back to Rooms
+            </a>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

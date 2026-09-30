@@ -1,0 +1,389 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f7fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #222;
+    padding: 18px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #4CAF50;
+}
+
+/* Main Headings */
+h1 {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Room Card */
+.room {
+    background-color: white;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Availability */
+.available {
+    color: green;
+    font-weight: bold;
+}
+
+.not-available {
+    color: red;
+    font-weight: bold;
+}
+
+/* Buttons */
+button {
+    background-color: #222;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #4CAF50;
+}
+
+/* Links as Buttons */
+a.button {
+    display: inline-block;
+    background-color: #222;
+    color: white;
+    padding: 10px 18px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+a.button:hover {
+    background-color: #4CAF50;
+}
+
+/* Forms */
+input,
+select {
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Dashboard Layout */
+
+.dashboard {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.dashboard h1 {
+    margin-bottom: 35px;
+}
+
+/* Dashboard Cards */
+
+.dashboard-cards {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.dashboard-card {
+    background-color: white;
+    flex: 1;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.dashboard-card h2 {
+    margin-bottom: 20px;
+}
+
+.dashboard-card h3 {
+    font-size: 30px;
+    margin: 10px 0 5px;
+}
+
+.dashboard-card p {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Quick Actions */
+
+.quick-actions {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* Rooms Page */
+
+.page-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.page-container > h1 {
+    margin-bottom: 35px;
+}
+
+/* Availability Form */
+
+.availability-form {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.availability-form form {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 180px;
+}
+
+/* Rooms Grid */
+
+.rooms-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* Room Cards */
+
+.room-card {
+    max-width: none;
+    margin: 0;
+    text-align: center;
+}
+
+.room-card h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.room-card p {
+    margin: 12px 0;
+}
+
+/* Room Action Buttons */
+
+.room-actions {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.room-actions .button {
+    padding: 8px 12px;
+    font-size: 14px;
+}
+
+.delete-button {
+    background-color: #b02a37 !important;
+}
+
+.delete-button:hover {
+    background-color: #8c1f2a !important;
+}
+
+/* No Rooms Message */
+
+.no-rooms {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+}
+/* Bookings Page */
+
+.booking-top-action {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.bookings-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.booking-card {
+    max-width: none;
+    margin: 0;
+}
+
+.booking-card h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.booking-card p {
+    margin: 12px 0;
+}
+
+.booking-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+.booking-actions .button {
+    padding: 9px 14px;
+    font-size: 14px;
+}
+
+ /* Guests Page */
+
+.guest-search {
+    max-width: 700px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.guest-search h2 {
+    margin-bottom: 20px;
+}
+
+.guest-search form {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.guest-search input {
+    width: 300px;
+    padding: 12px;
+    font-size: 15px;
+}
+
+.guests-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.guest-card {
+    max-width: none;
+    margin: 0;
+}
+
+.guest-card h3 {
+    font-size: 21px;
+    margin-bottom: 20px;
+}
+
+.guest-details p {
+    margin: 13px 0;
+    color: #555;
+}
+
+/* Room Form */
+
+.form-card {
+    background-color: white;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+.form-card h2 {
+    margin-bottom: 30px;
+}
+
+.django-form p {
+    margin-bottom: 20px;
+}
+
+.django-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 7px;
+}
+
+.django-form input,
+.django-form select,
+.django-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+}
+
+.django-form input:focus,
+.django-form select:focus,
+.django-form textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
+
+.form-card button {
+    margin-top: 10px;
+}
+
+.back-link {
+    text-align: center;
+    margin-top: 25px;
+}

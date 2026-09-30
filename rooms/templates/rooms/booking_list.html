@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Booking Management - Hospitality Management System</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <nav>
+        <a href="/">Dashboard</a>
+        <a href="/rooms/">Rooms</a>
+        <a href="/bookings/">Bookings</a>
+        <a href="/guests/">Guests</a>
+        <a href="/add-room/">Add Room</a>
+        <a href="/add-booking/">Add Booking</a>
+        <a href="/admin/">Admin</a>
+    </nav>
+
+    <div class="page-container">
+
+        <h1>📅 Booking Management</h1>
+
+        <div class="booking-top-action">
+            <a href="/add-booking/" class="button">
+                ➕ Add New Booking
+            </a>
+        </div>
+
+        <h2>All Bookings</h2>
+
+        <div class="bookings-grid">
+
+            {% for booking in bookings %}
+
+                <div class="room booking-card">
+
+                    <h3>
+                        👤 {{ booking.guest_name }}
+                    </h3>
+
+                    <p>
+                        🏨 <strong>Room:</strong>
+                        {{ booking.room.room_number }}
+                    </p>
+
+                    <p>
+                        🛏️ <strong>Room Type:</strong>
+                        {{ booking.room.room_type }}
+                    </p>
+
+                    <p>
+                        📅 <strong>Check-in:</strong>
+                        {{ booking.check_in }}
+                    </p>
+
+                    <p>
+                        📅 <strong>Check-out:</strong>
+                        {{ booking.check_out }}
+                    </p>
+
+                    <div class="booking-actions">
+
+                        <a
+                            href="/edit-booking/{{ booking.id }}/"
+                            class="button"
+                        >
+                            ✏️ Edit Booking
+                        </a>
+
+                        <a
+                            href="/delete-booking/{{ booking.id }}/"
+                            class="button delete-button"
+                        >
+                            🗑️ Delete Booking
+                        </a>
+
+                    </div>
+
+                </div>
+
+            {% empty %}
+
+                <p class="no-rooms">
+                    No bookings found.
+                </p>
+
+            {% endfor %}
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

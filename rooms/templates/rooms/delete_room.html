@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Delete Room - Hospitality Management System</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <nav>
+        <a href="/">Dashboard</a>
+        <a href="/rooms/">Rooms</a>
+        <a href="/bookings/">Bookings</a>
+        <a href="/guests/">Guests</a>
+        <a href="/add-room/">Add Room</a>
+        <a href="/add-booking/">Add Booking</a>
+        <a href="/admin/">Admin</a>
+    </nav>
+
+    <h1>🗑️ Delete Room</h1>
+
+    <div class="room">
+
+        <h2>Confirm Deletion</h2>
+
+        <p>
+            Are you sure you want to delete
+            <strong>Room {{ room.room_number }}</strong>?
+        </p>
+
+        <p>
+            Room Type: {{ room.room_type }}
+        </p>
+
+        <p>
+            Price: ₹{{ room.price }}
+        </p>
+
+        <form method="POST">
+
+            {% csrf_token %}
+
+            <button type="submit">
+                🗑️ Yes, Delete Room
+            </button>
+
+        </form>
+
+        <br>
+
+        <a href="/rooms/">
+            ← Cancel
+        </a>
+
+    </div>
+
+</body>
+
+</html>

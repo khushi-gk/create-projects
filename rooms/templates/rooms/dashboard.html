@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Dashboard - Hospitality Management System</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="/">Dashboard</a>
+        <a href="/rooms/">Rooms</a>
+        <a href="/bookings/">Bookings</a>
+        <a href="/guests/">Guests</a>
+        <a href="/add-room/">Add Room</a>
+        <a href="/add-booking/">Add Booking</a>
+        <a href="/admin/">Admin</a>
+    </nav>
+
+    <!-- Dashboard -->
+    <div class="dashboard">
+
+        <h1>Hospitality Management Dashboard</h1>
+
+        <!-- Summary Cards -->
+        <div class="dashboard-cards">
+
+            <div class="dashboard-card">
+                <h2>🏨 Rooms</h2>
+                <h3>{{ total_rooms }}</h3>
+                <p>Total Rooms</p>
+
+                <h3>{{ available_rooms }}</h3>
+                <p>Available Rooms</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>📅 Bookings</h2>
+                <h3>{{ total_bookings }}</h3>
+                <p>Total Bookings</p>
+            </div>
+
+            <div class="dashboard-card">
+                <h2>👥 Guests</h2>
+                <h3>{{ total_guests }}</h3>
+                <p>Total Guests</p>
+            </div>
+
+        </div>
+
+        <!-- Quick Actions -->
+        <div class="quick-actions">
+
+            <h2>Quick Actions</h2>
+
+            <div class="action-buttons">
+
+                <a href="/add-room/" class="button">
+                    ➕ Add New Room
+                </a>
+
+                <a href="/add-booking/" class="button">
+                    📅 Add New Booking
+                </a>
+
+                <a href="/rooms/" class="button">
+                    🏨 View Rooms
+                </a>
+
+                <a href="/bookings/" class="button">
+                    📋 View Bookings
+                </a>
+
+                <a href="/guests/" class="button">
+                    👥 View Guests
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
